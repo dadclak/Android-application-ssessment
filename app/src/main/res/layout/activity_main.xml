@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rostyslav.assessment.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editName"
+            android:layout_alignBottom="@+id/editName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:text="Name"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/textName"
+            android:ems="10"
+            android:hint="Please, write your name"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:id="@+id/textSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textName"
+            android:layout_below="@+id/editName"
+            android:layout_marginTop="15dp"
+            android:text="Surname"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editName"
+            android:layout_toRightOf="@+id/textSurname"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="Write your last name"
+            android:inputType="textCapWords" />
+            android:selectAllOnFocus="false"
+            android:singleLine="false" />
+
+        <TextView
+            android:id="@+id/textRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textSurname"
+            android:layout_below="@+id/editSurname"
+            android:layout_marginTop="15dp"
+            android:text="Number of ratings"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/editRatings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textRatings"
+            android:layout_alignBottom="@+id/textRatings"
+            android:layout_toEndOf="@+id/textRatings"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="5-15"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average assessment is "
+            android:layout_below="@id/textRatings"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textAverage"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textAverage"
+            android:layout_below="@+id/editRatings"
+            android:id="@+id/average"
+            android:layout_marginTop="5dp"
+            android:text="3.65"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/butttonAssessment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textAverage"
+            android:layout_marginTop="10dp"
+            android:text="Assessment" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
